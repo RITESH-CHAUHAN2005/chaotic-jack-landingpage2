@@ -1,4 +1,3 @@
-
 import { MessageCircle } from "lucide-react";
 
 const Hero = () => {
@@ -44,13 +43,13 @@ const Hero = () => {
             CHAOTIC JACK
           </h1>
 
-          {/* Value proposition paragraph */}
+          {/* Shortened value proposition paragraphs */}
           <div className="mb-8 md:mb-12 animate-fade-in" style={{animationDelay: '0.3s'}}>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-300 max-w-5xl mx-auto leading-relaxed font-medium">
-              Transforming Ideas into Digital Reality - Expert Website Development & Mobile App Solutions
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-medium">
+              Expert Website & Mobile App Development
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-4xl mx-auto mt-4 leading-relaxed">
-              From stunning responsive websites to powerful mobile applications, we craft digital experiences that drive business growth and user engagement.
+            <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mt-4 leading-relaxed">
+              Crafting digital experiences that drive business growth
             </p>
           </div>
 
@@ -138,42 +137,38 @@ const Hero = () => {
                             {/* SEO */}
                             <div className="flex flex-col items-center w-1/6">
                               <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg w-4 md:w-8 h-12 md:h-16 animate-float shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.1s'}}></div>
+                              <span className="text-xs md:text-sm text-slate-600 font-semibold mt-1 animate-fade-in hover:text-blue-600 transition-colors cursor-pointer">SEO</span>
                             </div>
                             
                             {/* Social */}
                             <div className="flex flex-col items-center w-1/6">
                               <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-lg w-4 md:w-8 h-16 md:h-24 animate-float shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.2s'}}></div>
+                              <span className="text-xs md:text-sm text-slate-600 font-semibold mt-1 animate-fade-in hover:text-purple-600 transition-colors cursor-pointer" style={{animationDelay: '0.2s'}}>Social</span>
                             </div>
                             
                             {/* PPC */}
                             <div className="flex flex-col items-center w-1/6">
                               <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-lg w-4 md:w-8 h-8 md:h-12 animate-float shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.3s'}}></div>
+                              <span className="text-xs md:text-sm text-slate-600 font-semibold mt-1 animate-fade-in hover:text-indigo-600 transition-colors cursor-pointer" style={{animationDelay: '0.4s'}}>PPC</span>
                             </div>
                             
                             {/* Email */}
                             <div className="flex flex-col items-center w-1/6">
                               <div className="bg-gradient-to-t from-cyan-600 to-cyan-400 rounded-t-lg w-4 md:w-8 h-14 md:h-20 animate-float shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.4s'}}></div>
+                              <span className="text-xs md:text-sm text-slate-600 font-semibold mt-1 animate-fade-in hover:text-cyan-600 transition-colors cursor-pointer" style={{animationDelay: '0.6s'}}>Email</span>
                             </div>
                             
                             {/* Content */}
                             <div className="flex flex-col items-center w-1/6">
                               <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-lg w-4 md:w-8 h-10 md:h-18 animate-float shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.5s'}}></div>
+                              <span className="text-xs md:text-sm text-slate-600 font-semibold mt-1 animate-fade-in hover:text-purple-600 transition-colors cursor-pointer" style={{animationDelay: '0.8s'}}>Content</span>
                             </div>
                             
                             {/* Web Dev */}
                             <div className="flex flex-col items-center w-1/6">
                               <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg w-4 md:w-8 h-18 md:h-28 animate-float shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.6s'}}></div>
+                              <span className="text-xs md:text-sm text-slate-600 font-semibold mt-1 animate-fade-in hover:text-blue-600 transition-colors cursor-pointer" style={{animationDelay: '1s'}}>Web Dev</span>
                             </div>
-                          </div>
-                          
-                          {/* Labels directly under their respective bars */}
-                          <div className="flex justify-between text-xs md:text-sm text-slate-600 font-semibold">
-                            <span className="w-1/6 text-center animate-fade-in hover:text-blue-600 transition-colors cursor-pointer">SEO</span>
-                            <span className="w-1/6 text-center animate-fade-in hover:text-purple-600 transition-colors cursor-pointer" style={{animationDelay: '0.2s'}}>Social</span>
-                            <span className="w-1/6 text-center animate-fade-in hover:text-indigo-600 transition-colors cursor-pointer" style={{animationDelay: '0.4s'}}>PPC</span>
-                            <span className="w-1/6 text-center animate-fade-in hover:text-cyan-600 transition-colors cursor-pointer" style={{animationDelay: '0.6s'}}>Email</span>
-                            <span className="w-1/6 text-center animate-fade-in hover:text-purple-600 transition-colors cursor-pointer" style={{animationDelay: '0.8s'}}>Content</span>
-                            <span className="w-1/6 text-center animate-fade-in hover:text-blue-600 transition-colors cursor-pointer" style={{animationDelay: '1s'}}>Web Dev</span>
                           </div>
                         </div>
                         

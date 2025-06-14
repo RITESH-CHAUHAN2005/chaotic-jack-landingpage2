@@ -1,18 +1,14 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Palette, CheckCircle, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Code, Palette, CheckCircle } from "lucide-react";
 
 const Services = () => {
-  const [selectedService, setSelectedService] = useState<string | null>(null);
-
   const handleServiceClick = (service: string, price: number) => {
-    setSelectedService(service);
-    alert(`${service} - Starting Price: ₹${price.toLocaleString()}\n\nContact us via WhatsApp to get started!`);
+    alert(`${service}\nStarting Price: ₹${price.toLocaleString()}\n\nContact us via WhatsApp to get started!`);
   };
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+    <section className="py-12 md:py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
       {/* Enhanced animated background with more elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large moving gradient orbs */}
@@ -47,143 +43,123 @@ const Services = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 md:mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 md:mb-8 animate-fade-in">
+        <div className="text-center mb-12 md:mb-16 lg:mb-24">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 md:mb-6 lg:mb-8 animate-fade-in">
             Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Expertise</span>
           </h2>
-          <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto animate-fade-in leading-relaxed" style={{animationDelay: '0.3s'}}>
+          <p className="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto animate-fade-in leading-relaxed px-4" style={{animationDelay: '0.3s'}}>
             Cutting-edge solutions that transform businesses and drive growth
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
           {/* Web Development Card */}
           <Card 
-            className="group hover:shadow-2xl transition-all duration-700 border-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden relative animate-fade-in hover:scale-105 transform-gpu cursor-pointer" 
+            className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden relative animate-fade-in hover:scale-105 transform-gpu cursor-pointer" 
             style={{animationDelay: '0.6s'}}
             onClick={() => handleServiceClick('Web Development', 15000)}
           >
             {/* Dynamic background effects */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/15 to-purple-600/15 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/15 to-purple-600/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             {/* Animated circuit pattern */}
             <div className="absolute inset-0 opacity-5">
-              <div className="absolute top-4 left-4 w-32 h-32 border border-white/20 rounded-lg animate-pulse"></div>
-              <div className="absolute bottom-4 right-4 w-24 h-24 border border-white/20 rounded-lg animate-pulse" style={{animationDelay: '1s'}}></div>
-              <div className="absolute top-1/2 right-8 w-16 h-16 border border-white/10 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+              <div className="absolute top-4 left-4 w-24 h-24 md:w-32 md:h-32 border border-white/20 rounded-lg animate-pulse"></div>
+              <div className="absolute bottom-4 right-4 w-16 h-16 md:w-24 md:h-24 border border-white/20 rounded-lg animate-pulse" style={{animationDelay: '1s'}}></div>
+              <div className="absolute top-1/2 right-8 w-12 h-12 md:w-16 md:h-16 border border-white/10 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
             </div>
             
             {/* Flowing particles */}
-            <div className="absolute top-8 left-8 w-2 h-2 bg-blue-400/40 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
-            <div className="absolute top-16 right-16 w-1 h-1 bg-purple-400/40 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
-            <div className="absolute bottom-16 left-16 w-3 h-3 bg-cyan-400/40 rounded-full animate-bounce" style={{animationDelay: '2.5s'}}></div>
+            <div className="absolute top-6 left-6 md:top-8 md:left-8 w-2 h-2 bg-blue-400/40 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
+            <div className="absolute top-12 right-12 md:top-16 md:right-16 w-1 h-1 bg-purple-400/40 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
+            <div className="absolute bottom-12 left-12 md:bottom-16 md:left-16 w-3 h-3 bg-cyan-400/40 rounded-full animate-bounce" style={{animationDelay: '2.5s'}}></div>
 
-            <CardHeader className="relative z-10 pb-6">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-2xl">
-                <Code className="w-8 h-8 md:w-10 md:h-10 text-white" />
+            <CardHeader className="relative z-10 pb-4 md:pb-6 p-4 md:p-6">
+              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 shadow-2xl">
+                <Code className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-white" />
               </div>
-              <CardTitle className="text-2xl md:text-3xl font-bold mb-3 group-hover:scale-105 transition-transform duration-500">
+              <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 group-hover:scale-105 transition-transform duration-500">
                 Web Development
               </CardTitle>
-              <CardDescription className="text-slate-300 text-base md:text-lg leading-relaxed">
-                Professional websites and web applications built with modern technologies
-              </CardDescription>
-              <div className="mt-4 text-2xl font-bold text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                Starting from ₹15,000
-              </div>
             </CardHeader>
-            <CardContent className="relative z-10">
-              <ul className="space-y-4 text-base md:text-lg">
+            <CardContent className="relative z-10 p-4 md:p-6 pt-0">
+              <ul className="space-y-3 md:space-y-4 text-sm md:text-base lg:text-lg">
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span>Responsive Design & Mobile Optimization</span>
                 </li>
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300" style={{transitionDelay: '0.1s'}}>
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span>React & Modern JavaScript Frameworks</span>
                 </li>
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300" style={{transitionDelay: '0.2s'}}>
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span>Database Integration & API Development</span>
                 </li>
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300" style={{transitionDelay: '0.3s'}}>
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span>E-commerce & Payment Gateway Integration</span>
                 </li>
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300" style={{transitionDelay: '0.4s'}}>
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span>SEO Optimization & Performance Tuning</span>
                 </li>
               </ul>
-              <div className="mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 font-semibold">
-                <span>Click to get quote</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
-              </div>
             </CardContent>
           </Card>
 
           {/* UI/UX Design Card */}
           <Card 
-            className="group hover:shadow-2xl transition-all duration-700 border-0 bg-gradient-to-br from-white to-slate-50 text-slate-900 overflow-hidden relative animate-fade-in hover:scale-105 transform-gpu border border-slate-200 cursor-pointer" 
+            className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-white to-slate-50 text-slate-900 overflow-hidden relative animate-fade-in hover:scale-105 transform-gpu border border-slate-200 cursor-pointer" 
             style={{animationDelay: '0.9s'}}
             onClick={() => handleServiceClick('UI/UX Design', 10000)}
           >
             {/* Dynamic background effects */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/70 to-purple-50/70 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/70 to-purple-50/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             {/* Design grid pattern */}
             <div className="absolute inset-0 opacity-5">
-              <div className="absolute top-6 right-6 w-28 h-28 border border-slate-300 rounded-xl"></div>
-              <div className="absolute bottom-6 left-6 w-20 h-20 border border-slate-300 rounded-xl" style={{animationDelay: '1s'}}></div>
-              <div className="absolute top-1/3 left-8 w-12 h-12 border border-slate-200 rounded-lg animate-pulse" style={{animationDelay: '2s'}}></div>
+              <div className="absolute top-4 right-4 md:top-6 md:right-6 w-20 h-20 md:w-28 md:h-28 border border-slate-300 rounded-xl"></div>
+              <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-16 h-16 md:w-20 md:h-20 border border-slate-300 rounded-xl" style={{animationDelay: '1s'}}></div>
+              <div className="absolute top-1/3 left-6 md:left-8 w-8 h-8 md:w-12 md:h-12 border border-slate-200 rounded-lg animate-pulse" style={{animationDelay: '2s'}}></div>
             </div>
             
             {/* Color palette dots */}
-            <div className="absolute top-12 left-12 w-2 h-2 bg-indigo-400/30 rounded-full animate-pulse"></div>
-            <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-            <div className="absolute bottom-20 left-20 w-3 h-3 bg-blue-400/30 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+            <div className="absolute top-8 left-8 md:top-12 md:left-12 w-2 h-2 bg-indigo-400/30 rounded-full animate-pulse"></div>
+            <div className="absolute top-16 right-16 md:top-20 md:right-20 w-1 h-1 bg-purple-400/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="absolute bottom-16 left-16 md:bottom-20 md:left-20 w-3 h-3 bg-blue-400/30 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
 
-            <CardHeader className="relative z-10 pb-6">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-2xl">
-                <Palette className="w-8 h-8 md:w-10 md:h-10 text-white" />
+            <CardHeader className="relative z-10 pb-4 md:pb-6 p-4 md:p-6">
+              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 shadow-2xl">
+                <Palette className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-white" />
               </div>
-              <CardTitle className="text-2xl md:text-3xl font-bold mb-3 group-hover:scale-105 transition-transform duration-500">
+              <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 group-hover:scale-105 transition-transform duration-500">
                 UI/UX Design
               </CardTitle>
-              <CardDescription className="text-slate-600 text-base md:text-lg leading-relaxed">
-                Beautiful and intuitive designs that enhance user experience and engagement
-              </CardDescription>
-              <div className="mt-4 text-2xl font-bold text-purple-600 group-hover:text-purple-500 transition-colors">
-                Starting from ₹10,000
-              </div>
             </CardHeader>
-            <CardContent className="relative z-10">
-              <ul className="space-y-4 text-base md:text-lg">
+            <CardContent className="relative z-10 p-4 md:p-6 pt-0">
+              <ul className="space-y-3 md:space-y-4 text-sm md:text-base lg:text-lg">
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-3 flex-shrink-0" />
                   <span>User Research & Persona Development</span>
                 </li>
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300" style={{transitionDelay: '0.1s'}}>
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-3 flex-shrink-0" />
                   <span>Wireframing & Interactive Prototyping</span>
                 </li>
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300" style={{transitionDelay: '0.2s'}}>
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-3 flex-shrink-0" />
                   <span>Visual Design & Brand Identity</span>
                 </li>
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300" style={{transitionDelay: '0.3s'}}>
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-3 flex-shrink-0" />
                   <span>Mobile App UI & Responsive Design</span>
                 </li>
                 <li className="flex items-center group-hover:translate-x-2 transition-transform duration-300" style={{transitionDelay: '0.4s'}}>
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-3 flex-shrink-0" />
                   <span>Usability Testing & Design Systems</span>
                 </li>
               </ul>
-              <div className="mt-6 flex items-center text-purple-600 group-hover:text-purple-500 font-semibold">
-                <span>Click to get quote</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
-              </div>
             </CardContent>
           </Card>
         </div>
