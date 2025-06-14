@@ -14,10 +14,10 @@ const Hero = () => {
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-br from-indigo-600/10 to-blue-600/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-purple-600/5 to-indigo-600/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '4s'}}></div>
         
-        {/* Floating geometric shapes */}
-        <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{animationDelay: '3s'}}></div>
-        <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-indigo-400 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        {/* Professional geometric shapes */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400/60 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/60 rounded-full animate-bounce" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-indigo-400/60 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
       </div>
 
       {/* WhatsApp floating button */}
@@ -37,73 +37,100 @@ const Hero = () => {
             CHAOTIC JACK
           </h1>
 
-          {/* Professional dashboard figure */}
+          {/* Professional analytics dashboard */}
           <div className="relative max-w-5xl mx-auto animate-scale-in" style={{animationDelay: '0.8s'}}>
             <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-700/50 backdrop-blur-xl transform hover:scale-105 transition-transform duration-700">
-              {/* Professional analytics dashboard */}
+              {/* Professional business dashboard */}
               <div className="bg-slate-50 rounded-2xl p-8 relative overflow-hidden">
+                {/* Header with navigation dots */}
                 <div className="flex items-center justify-between mb-8">
                   <div className="flex space-x-3">
-                    <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-                    <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <div className="text-slate-700 font-semibold text-lg">Performance Analytics</div>
+                  <div className="text-slate-700 font-semibold text-lg">Business Analytics Dashboard</div>
                 </div>
                 
-                {/* Professional metrics grid */}
+                {/* Professional KPI metrics */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
-                    <div className="text-blue-700 font-bold text-3xl mb-2">248%</div>
-                    <div className="text-blue-600 text-sm font-medium">Revenue Growth</div>
-                    <div className="w-full bg-blue-200 rounded-full h-2 mt-3">
-                      <div className="bg-blue-600 h-2 rounded-full w-3/4 animate-pulse"></div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-blue-700 font-bold text-2xl">$2.4M</div>
+                      <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <div className="w-4 h-4 bg-white rounded-sm"></div>
+                      </div>
+                    </div>
+                    <div className="text-blue-600 text-sm font-medium mb-2">Annual Revenue</div>
+                    <div className="w-full bg-blue-200 rounded-full h-2">
+                      <div className="bg-blue-600 h-2 rounded-full w-3/4"></div>
                     </div>
                   </div>
+                  
                   <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200">
-                    <div className="text-purple-700 font-bold text-3xl mb-2">4.2M</div>
-                    <div className="text-purple-600 text-sm font-medium">Total Reach</div>
-                    <div className="w-full bg-purple-200 rounded-full h-2 mt-3">
-                      <div className="bg-purple-600 h-2 rounded-full w-5/6 animate-pulse" style={{animationDelay: '1s'}}></div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-purple-700 font-bold text-2xl">127K</div>
+                      <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+                        <div className="w-4 h-4 border-2 border-white rounded-full"></div>
+                      </div>
+                    </div>
+                    <div className="text-purple-600 text-sm font-medium mb-2">Active Users</div>
+                    <div className="w-full bg-purple-200 rounded-full h-2">
+                      <div className="bg-purple-600 h-2 rounded-full w-5/6"></div>
                     </div>
                   </div>
+                  
                   <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl border border-indigo-200">
-                    <div className="text-indigo-700 font-bold text-3xl mb-2">94%</div>
-                    <div className="text-indigo-600 text-sm font-medium">Client Satisfaction</div>
-                    <div className="w-full bg-indigo-200 rounded-full h-2 mt-3">
-                      <div className="bg-indigo-600 h-2 rounded-full w-11/12 animate-pulse" style={{animationDelay: '2s'}}></div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-indigo-700 font-bold text-2xl">98.7%</div>
+                      <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                        <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
+                      </div>
+                    </div>
+                    <div className="text-indigo-600 text-sm font-medium mb-2">Uptime</div>
+                    <div className="w-full bg-indigo-200 rounded-full h-2">
+                      <div className="bg-indigo-600 h-2 rounded-full w-11/12"></div>
                     </div>
                   </div>
                 </div>
 
-                {/* Professional chart visualization */}
+                {/* Professional data visualization */}
                 <div className="space-y-4">
-                  <div className="flex items-end space-x-2 h-24">
-                    <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-md w-8 h-16 animate-pulse"></div>
-                    <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-md w-8 h-20 animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                    <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-md w-8 h-12 animate-pulse" style={{animationDelay: '1s'}}></div>
-                    <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-md w-8 h-24 animate-pulse" style={{animationDelay: '1.5s'}}></div>
-                    <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-md w-8 h-18 animate-pulse" style={{animationDelay: '2s'}}></div>
-                    <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-md w-8 h-14 animate-pulse" style={{animationDelay: '2.5s'}}></div>
+                  <div className="flex items-end justify-center space-x-3 h-32 bg-gradient-to-t from-slate-100 to-white rounded-lg p-4">
+                    <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-md w-8 h-16"></div>
+                    <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-md w-8 h-24"></div>
+                    <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-md w-8 h-12"></div>
+                    <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-md w-8 h-28"></div>
+                    <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-md w-8 h-20"></div>
+                    <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-md w-8 h-18"></div>
+                    <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-md w-8 h-22"></div>
+                  </div>
+                  
+                  {/* Timeline indicators */}
+                  <div className="flex justify-center space-x-8 text-xs text-slate-500 font-medium">
+                    <span>Q1</span>
+                    <span>Q2</span>
+                    <span>Q3</span>
+                    <span>Q4</span>
                   </div>
                 </div>
 
-                {/* Professional icons */}
+                {/* Professional status indicators */}
                 <div className="absolute top-6 right-6 flex space-x-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center shadow-lg">
-                    <span className="text-white text-sm">📈</span>
+                    <div className="w-4 h-4 bg-white rounded-sm"></div>
                   </div>
                   <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center shadow-lg">
-                    <span className="text-white text-sm">⚡</span>
+                    <div className="w-4 h-4 border-2 border-white rounded-full"></div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Professional floating elements */}
-            <div className="absolute -top-6 -left-6 w-12 h-12 bg-blue-500 rounded-lg rotate-12 animate-float opacity-20"></div>
-            <div className="absolute -bottom-6 -right-6 w-8 h-8 bg-purple-500 rounded-lg -rotate-12 animate-float opacity-20" style={{animationDelay: '2s'}}></div>
-            <div className="absolute top-1/2 -left-12 w-6 h-6 bg-indigo-500 rounded-lg rotate-45 animate-float opacity-20" style={{animationDelay: '4s'}}></div>
+            {/* Professional floating geometric elements */}
+            <div className="absolute -top-6 -left-6 w-12 h-12 bg-blue-500/20 rounded-lg rotate-12 animate-float"></div>
+            <div className="absolute -bottom-6 -right-6 w-8 h-8 bg-purple-500/20 rounded-lg -rotate-12 animate-float" style={{animationDelay: '2s'}}></div>
+            <div className="absolute top-1/2 -left-12 w-6 h-6 bg-indigo-500/20 rounded-lg rotate-45 animate-float" style={{animationDelay: '4s'}}></div>
           </div>
         </div>
       </div>
