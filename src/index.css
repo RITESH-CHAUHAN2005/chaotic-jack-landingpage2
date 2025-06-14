@@ -1,8 +1,9 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* High-performance design system optimized for fast rendering */
 
 @layer base {
   :root {
@@ -37,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -99,5 +93,45 @@
 
   body {
     @apply bg-background text-foreground;
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Performance optimizations */
+  * {
+    will-change: auto;
+  }
+
+  .animate-float,
+  .animate-pulse,
+  .animate-bounce {
+    will-change: transform;
+  }
+
+  /* Hide any external branding */
+  iframe[src*="lovable"],
+  div[class*="lovable"],
+  a[href*="lovable"],
+  .gptengineer-badge,
+  #gptengineer-badge {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
+/* Fast animations for better performance */
+@layer utilities {
+  .animate-fast-pulse {
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-fast-bounce {
+    animation: bounce 0.8s infinite;
+  }
+  
+  .animate-fast-float {
+    animation: float 3s ease-in-out infinite;
   }
 }
