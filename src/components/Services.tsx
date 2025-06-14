@@ -1,10 +1,16 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Palette, CheckCircle } from "lucide-react";
+import { Code, Palette, CheckCircle, X } from "lucide-react";
+import { useState } from "react";
 
 const Services = () => {
-  const handleServiceClick = (service: string, price: number) => {
-    alert(`${service}\nStarting Price: ₹${price.toLocaleString()}\n\nContact us via WhatsApp to get started!`);
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+
+  const handleServiceClick = (service: string) => {
+    setSelectedService(selectedService === service ? null : service);
+  };
+
+  const getServicePrice = (service: string) => {
+    return service === 'Web Development' ? 15000 : 10000;
   };
 
   return (
@@ -57,7 +63,7 @@ const Services = () => {
           <Card 
             className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden relative animate-fade-in hover:scale-105 transform-gpu cursor-pointer" 
             style={{animationDelay: '0.6s'}}
-            onClick={() => handleServiceClick('Web Development', 15000)}
+            onClick={() => handleServiceClick('Web Development')}
           >
             {/* Dynamic background effects */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/15 to-purple-600/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -105,6 +111,25 @@ const Services = () => {
                   <span>SEO Optimization & Performance Tuning</span>
                 </li>
               </ul>
+
+              {/* Pricing Display */}
+              {selectedService === 'Web Development' && (
+                <div className="mt-6 p-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg border border-blue-400/30 backdrop-blur-sm animate-fade-in">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-1">Starting Price</h4>
+                      <p className="text-2xl font-bold text-green-400">₹{getServicePrice('Web Development').toLocaleString()}</p>
+                      <p className="text-sm text-slate-300 mt-1">Contact us via WhatsApp to get started!</p>
+                    </div>
+                    <button 
+                      onClick={(e) => {e.stopPropagation(); setSelectedService(null);}}
+                      className="text-white hover:text-red-400 transition-colors"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              )}
             </CardContent>
           </Card>
 
@@ -112,7 +137,7 @@ const Services = () => {
           <Card 
             className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-white to-slate-50 text-slate-900 overflow-hidden relative animate-fade-in hover:scale-105 transform-gpu border border-slate-200 cursor-pointer" 
             style={{animationDelay: '0.9s'}}
-            onClick={() => handleServiceClick('UI/UX Design', 10000)}
+            onClick={() => handleServiceClick('UI/UX Design')}
           >
             {/* Dynamic background effects */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/70 to-purple-50/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -160,6 +185,25 @@ const Services = () => {
                   <span>Usability Testing & Design Systems</span>
                 </li>
               </ul>
+
+              {/* Pricing Display */}
+              {selectedService === 'UI/UX Design' && (
+                <div className="mt-6 p-4 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg border border-indigo-400/30 backdrop-blur-sm animate-fade-in">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="text-lg font-semibold text-slate-900 mb-1">Starting Price</h4>
+                      <p className="text-2xl font-bold text-green-600">₹{getServicePrice('UI/UX Design').toLocaleString()}</p>
+                      <p className="text-sm text-slate-600 mt-1">Contact us via WhatsApp to get started!</p>
+                    </div>
+                    <button 
+                      onClick={(e) => {e.stopPropagation(); setSelectedService(null);}}
+                      className="text-slate-900 hover:text-red-500 transition-colors"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
