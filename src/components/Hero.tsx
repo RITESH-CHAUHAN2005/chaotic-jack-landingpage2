@@ -106,23 +106,35 @@ const Hero = () => {
                       </div>
                     </div>
 
-                    {/* Animated Marketing Charts */}
+                    {/* Enhanced Marketing Performance Chart */}
                     <div className="space-y-4">
-                      <div className="flex items-end justify-center space-x-2 h-24 bg-gradient-to-t from-slate-100 to-white rounded-lg p-3">
-                        <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-sm w-6 h-12 animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                        <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-sm w-6 h-20 animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                        <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-sm w-6 h-8 animate-bounce" style={{animationDelay: '0.3s'}}></div>
-                        <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-sm w-6 h-16 animate-bounce" style={{animationDelay: '0.4s'}}></div>
-                        <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-sm w-6 h-14 animate-bounce" style={{animationDelay: '0.5s'}}></div>
-                        <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-sm w-6 h-18 animate-bounce" style={{animationDelay: '0.6s'}}></div>
+                      <div className="flex items-end justify-center space-x-3 h-32 bg-gradient-to-t from-slate-100 to-white rounded-lg p-4 relative overflow-hidden">
+                        {/* Background grid for professional look */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-50 to-transparent opacity-50"></div>
+                        
+                        {/* Animated bars with better heights and showcase effect */}
+                        <div className="relative flex items-end space-x-2 z-10">
+                          <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg w-8 h-16 animate-bounce shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.1s'}}></div>
+                          <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-lg w-8 h-24 animate-bounce shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.2s'}}></div>
+                          <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-lg w-8 h-12 animate-bounce shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.3s'}}></div>
+                          <div className="bg-gradient-to-t from-cyan-600 to-cyan-400 rounded-t-lg w-8 h-20 animate-bounce shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.4s'}}></div>
+                          <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-lg w-8 h-18 animate-bounce shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.5s'}}></div>
+                          <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg w-8 h-28 animate-bounce shadow-lg transform hover:scale-110 transition-transform" style={{animationDelay: '0.6s'}}></div>
+                        </div>
+                        
+                        {/* Floating data points */}
+                        <div className="absolute top-2 left-8 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-70"></div>
+                        <div className="absolute top-4 right-12 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-70" style={{animationDelay: '1s'}}></div>
                       </div>
                       
-                      {/* Marketing Campaign Timeline */}
-                      <div className="flex justify-between text-xs text-slate-500 font-medium">
-                        <span className="animate-fade-in">Q1</span>
-                        <span className="animate-fade-in" style={{animationDelay: '0.2s'}}>Q2</span>
-                        <span className="animate-fade-in" style={{animationDelay: '0.4s'}}>Q3</span>
-                        <span className="animate-fade-in" style={{animationDelay: '0.6s'}}>Q4</span>
+                      {/* Meaningful Marketing Campaign Labels */}
+                      <div className="flex justify-between text-xs text-slate-600 font-semibold px-2">
+                        <span className="animate-fade-in hover:text-blue-600 transition-colors cursor-pointer">SEO</span>
+                        <span className="animate-fade-in hover:text-purple-600 transition-colors cursor-pointer" style={{animationDelay: '0.2s'}}>Social</span>
+                        <span className="animate-fade-in hover:text-indigo-600 transition-colors cursor-pointer" style={{animationDelay: '0.4s'}}>PPC</span>
+                        <span className="animate-fade-in hover:text-cyan-600 transition-colors cursor-pointer" style={{animationDelay: '0.6s'}}>Email</span>
+                        <span className="animate-fade-in hover:text-purple-600 transition-colors cursor-pointer" style={{animationDelay: '0.8s'}}>Content</span>
+                        <span className="animate-fade-in hover:text-blue-600 transition-colors cursor-pointer" style={{animationDelay: '1s'}}>Web Dev</span>
                       </div>
                     </div>
 
