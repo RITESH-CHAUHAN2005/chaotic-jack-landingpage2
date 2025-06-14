@@ -1,107 +1,96 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Monitor, Brain, ArrowRight } from "lucide-react";
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-white/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              What We Do
-            </span>
+    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-emerald-50 to-teal-50 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-emerald-200/30 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/3 right-20 w-32 h-32 bg-teal-200/20 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-cyan-200/30 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6 animate-fade-in">
+            Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
-            Professional web solutions that grow your business
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
+            Transform your digital presence with our expert solutions
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-6 rounded-full animate-fade-in" style={{animationDelay: '0.4s'}}></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Web Development Card */}
-          <Card className="group hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-blue-200 bg-white/80 backdrop-blur-sm hover:scale-105 animate-fade-in hover:animate-float" style={{animationDelay: '0.6s'}}>
-            <CardHeader className="text-center pb-6">
-              <div className="relative mx-auto mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-12">
-                  <Monitor className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-300" />
-                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-yellow-400 rounded-full animate-bounce"></div>
-                </div>
+          <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-emerald-500 to-teal-500 text-white overflow-hidden relative animate-fade-in animate-float" style={{animationDelay: '0.4s'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <CardHeader className="relative z-10 pb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl md:text-3xl animate-pulse">💻</span>
               </div>
-              <CardTitle className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">Web Development</CardTitle>
-              <CardDescription className="text-gray-600 text-lg">
-                Modern, responsive websites that convert visitors into customers and drive business growth with cutting-edge technology.
+              <CardTitle className="text-xl md:text-2xl font-bold mb-2 group-hover:scale-105 transition-transform duration-300">
+                Web Development
+              </CardTitle>
+              <CardDescription className="text-emerald-100 text-sm md:text-base">
+                Custom websites that convert visitors into customers
               </CardDescription>
             </CardHeader>
-            <CardContent className="pt-0">
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+            <CardContent className="relative z-10">
+              <ul className="space-y-2 text-sm md:text-base">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse"></span>
                   Responsive Design
                 </li>
-                <li className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                  Fast Loading
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse" style={{animationDelay: '0.5s'}}></span>
+                  E-commerce Solutions
                 </li>
-                <li className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                  SEO Optimized
-                </li>
-                <li className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse" style={{animationDelay: '0.6s'}}></div>
-                  Modern Framework
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse" style={{animationDelay: '1s'}}></span>
+                  Performance Optimization
                 </li>
               </ul>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300">Starting at ₹15,000</p>
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white group-hover:scale-105 transition-transform duration-300 hover:shadow-lg">
-                  Get Started <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-              </div>
             </CardContent>
+            {/* Floating animation elements */}
+            <div className="absolute top-4 right-4 w-3 h-3 bg-white/30 rounded-full animate-bounce" style={{animationDelay: '2s'}}></div>
+            <div className="absolute bottom-6 left-6 w-2 h-2 bg-white/40 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
           </Card>
 
           {/* UI/UX Design Card */}
-          <Card className="group hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-purple-200 bg-white/80 backdrop-blur-sm hover:scale-105 animate-fade-in hover:animate-float" style={{animationDelay: '0.8s'}}>
-            <CardHeader className="text-center pb-6">
-              <div className="relative mx-auto mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-12">
-                  <Brain className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-300" />
-                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-yellow-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
-                </div>
+          <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-teal-500 to-cyan-500 text-white overflow-hidden relative animate-fade-in animate-float" style={{animationDelay: '0.6s', animationDuration: '4s'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <CardHeader className="relative z-10 pb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:rotate-12">
+                <span className="text-2xl md:text-3xl animate-pulse">🎨</span>
               </div>
-              <CardTitle className="text-2xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">UI/UX Design</CardTitle>
-              <CardDescription className="text-gray-600 text-lg">
-                Beautiful, user-friendly designs that drive results and enhance user engagement with stunning visual experiences.
+              <CardTitle className="text-xl md:text-2xl font-bold mb-2 group-hover:scale-105 transition-transform duration-300">
+                UI/UX Design
+              </CardTitle>
+              <CardDescription className="text-teal-100 text-sm md:text-base">
+                Beautiful interfaces that users love to interact with
               </CardDescription>
             </CardHeader>
-            <CardContent className="pt-0">
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-700 hover:text-purple-600 transition-colors duration-200">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 animate-pulse"></div>
-                  Custom Design
-                </li>
-                <li className="flex items-center text-gray-700 hover:text-purple-600 transition-colors duration-200">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 animate-pulse" style={{animationDelay: '0.2s'}}></div>
+            <CardContent className="relative z-10">
+              <ul className="space-y-2 text-sm md:text-base">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse"></span>
                   User Research
                 </li>
-                <li className="flex items-center text-gray-700 hover:text-purple-600 transition-colors duration-200">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                  Brand Identity
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse" style={{animationDelay: '0.5s'}}></span>
+                  Wireframing & Prototyping
                 </li>
-                <li className="flex items-center text-gray-700 hover:text-purple-600 transition-colors duration-200">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 animate-pulse" style={{animationDelay: '0.6s'}}></div>
-                  Prototyping
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse" style={{animationDelay: '1s'}}></span>
+                  Visual Design
                 </li>
               </ul>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-purple-600 mb-4 group-hover:scale-110 transition-transform duration-300">Starting at ₹10,000</p>
-                <Button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white group-hover:scale-105 transition-transform duration-300 hover:shadow-lg">
-                  Get Started <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-              </div>
             </CardContent>
+            {/* Floating animation elements */}
+            <div className="absolute top-6 right-8 w-4 h-4 bg-white/30 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+            <div className="absolute bottom-4 left-4 w-2 h-2 bg-white/40 rounded-full animate-pulse" style={{animationDelay: '2.5s'}}></div>
+            <div className="absolute top-1/2 right-4 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{animationDelay: '3s'}}></div>
           </Card>
         </div>
       </div>
