@@ -37,100 +37,126 @@ const Hero = () => {
             CHAOTIC JACK
           </h1>
 
-          {/* Professional analytics dashboard */}
+          {/* Laptop-themed Marketing Dashboard */}
           <div className="relative max-w-5xl mx-auto animate-scale-in" style={{animationDelay: '0.8s'}}>
-            <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-700/50 backdrop-blur-xl transform hover:scale-105 transition-transform duration-700">
-              {/* Professional business dashboard */}
-              <div className="bg-slate-50 rounded-2xl p-8 relative overflow-hidden">
-                {/* Header with navigation dots */}
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex space-x-3">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  </div>
-                  <div className="text-slate-700 font-semibold text-lg">Business Analytics Dashboard</div>
-                </div>
-                
-                {/* Professional KPI metrics */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-blue-700 font-bold text-2xl">$2.4M</div>
-                      <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                        <div className="w-4 h-4 bg-white rounded-sm"></div>
-                      </div>
-                    </div>
-                    <div className="text-blue-600 text-sm font-medium mb-2">Annual Revenue</div>
-                    <div className="w-full bg-blue-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full w-3/4"></div>
-                    </div>
-                  </div>
+            {/* Laptop Base/Stand */}
+            <div className="bg-gradient-to-br from-slate-700 to-slate-800 p-2 rounded-b-3xl mx-auto max-w-4xl transform hover:scale-105 transition-transform duration-700">
+              {/* Laptop Screen */}
+              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-4 rounded-3xl shadow-2xl border border-slate-600/50 backdrop-blur-xl relative overflow-hidden">
+                {/* Screen bezel with camera */}
+                <div className="bg-gradient-to-br from-slate-900 to-black rounded-2xl p-6 relative">
+                  {/* Camera dot */}
+                  <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-slate-600 rounded-full"></div>
                   
-                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-purple-700 font-bold text-2xl">127K</div>
-                      <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
-                        <div className="w-4 h-4 border-2 border-white rounded-full"></div>
+                  {/* Marketing Dashboard Content */}
+                  <div className="bg-gradient-to-br from-white to-slate-50 rounded-xl p-6 mt-4 relative overflow-hidden">
+                    {/* Browser-like header */}
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex space-x-2">
+                        <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                      </div>
+                      <div className="text-slate-700 font-bold text-lg animate-fade-in">Digital Marketing Analytics</div>
+                      <div className="flex space-x-1">
+                        <div className="w-4 h-4 bg-slate-300 rounded animate-pulse"></div>
+                        <div className="w-4 h-4 bg-slate-300 rounded animate-pulse" style={{animationDelay: '0.3s'}}></div>
                       </div>
                     </div>
-                    <div className="text-purple-600 text-sm font-medium mb-2">Active Users</div>
-                    <div className="w-full bg-purple-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full w-5/6"></div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl border border-indigo-200">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-indigo-700 font-bold text-2xl">98.7%</div>
-                      <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-                        <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
+                    
+                    {/* Marketing KPIs with animations */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                      <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200 transform hover:scale-105 transition-all duration-300 animate-slide-up">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="text-blue-700 font-bold text-xl">₹15L+</div>
+                          <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center animate-bounce">
+                            <div className="w-3 h-3 bg-white rounded-sm"></div>
+                          </div>
+                        </div>
+                        <div className="text-blue-600 text-sm font-medium mb-2">Monthly Revenue</div>
+                        <div className="w-full bg-blue-200 rounded-full h-2">
+                          <div className="bg-blue-600 h-2 rounded-full w-4/5 animate-pulse"></div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-xl border border-purple-200 transform hover:scale-105 transition-all duration-300 animate-slide-up" style={{animationDelay: '0.2s'}}>
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="text-purple-700 font-bold text-xl">50K+</div>
+                          <div className="w-6 h-6 bg-purple-600 rounded flex items-center justify-center animate-bounce" style={{animationDelay: '0.5s'}}>
+                            <div className="w-3 h-3 border-2 border-white rounded-full"></div>
+                          </div>
+                        </div>
+                        <div className="text-purple-600 text-sm font-medium mb-2">Website Visitors</div>
+                        <div className="w-full bg-purple-200 rounded-full h-2">
+                          <div className="bg-purple-600 h-2 rounded-full w-5/6 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-4 rounded-xl border border-indigo-200 transform hover:scale-105 transition-all duration-300 animate-slide-up" style={{animationDelay: '0.4s'}}>
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="text-indigo-700 font-bold text-xl">95%</div>
+                          <div className="w-6 h-6 bg-indigo-600 rounded flex items-center justify-center animate-bounce" style={{animationDelay: '1s'}}>
+                            <div className="w-3 h-3 bg-white rounded-sm transform rotate-45"></div>
+                          </div>
+                        </div>
+                        <div className="text-indigo-600 text-sm font-medium mb-2">Client Success</div>
+                        <div className="w-full bg-indigo-200 rounded-full h-2">
+                          <div className="bg-indigo-600 h-2 rounded-full w-11/12 animate-pulse" style={{animationDelay: '1s'}}></div>
+                        </div>
                       </div>
                     </div>
-                    <div className="text-indigo-600 text-sm font-medium mb-2">Uptime</div>
-                    <div className="w-full bg-indigo-200 rounded-full h-2">
-                      <div className="bg-indigo-600 h-2 rounded-full w-11/12"></div>
+
+                    {/* Animated Marketing Charts */}
+                    <div className="space-y-4">
+                      <div className="flex items-end justify-center space-x-2 h-24 bg-gradient-to-t from-slate-100 to-white rounded-lg p-3">
+                        <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-sm w-6 h-12 animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                        <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-sm w-6 h-20 animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                        <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-sm w-6 h-8 animate-bounce" style={{animationDelay: '0.3s'}}></div>
+                        <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-sm w-6 h-16 animate-bounce" style={{animationDelay: '0.4s'}}></div>
+                        <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-sm w-6 h-14 animate-bounce" style={{animationDelay: '0.5s'}}></div>
+                        <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-sm w-6 h-18 animate-bounce" style={{animationDelay: '0.6s'}}></div>
+                      </div>
+                      
+                      {/* Marketing Campaign Timeline */}
+                      <div className="flex justify-between text-xs text-slate-500 font-medium">
+                        <span className="animate-fade-in">Q1</span>
+                        <span className="animate-fade-in" style={{animationDelay: '0.2s'}}>Q2</span>
+                        <span className="animate-fade-in" style={{animationDelay: '0.4s'}}>Q3</span>
+                        <span className="animate-fade-in" style={{animationDelay: '0.6s'}}>Q4</span>
+                      </div>
+                    </div>
+
+                    {/* Marketing Tools Icons */}
+                    <div className="absolute top-4 right-4 flex space-x-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center shadow-lg animate-float">
+                        <div className="w-3 h-3 bg-white rounded-sm"></div>
+                      </div>
+                      <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center shadow-lg animate-float" style={{animationDelay: '1s'}}>
+                        <div className="w-3 h-3 border-2 border-white rounded-full"></div>
+                      </div>
+                    </div>
+
+                    {/* Floating marketing elements */}
+                    <div className="absolute bottom-4 left-4 opacity-60">
+                      <div className="flex space-x-1">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                        <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Professional data visualization */}
-                <div className="space-y-4">
-                  <div className="flex items-end justify-center space-x-3 h-32 bg-gradient-to-t from-slate-100 to-white rounded-lg p-4">
-                    <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-md w-8 h-16"></div>
-                    <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-md w-8 h-24"></div>
-                    <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-md w-8 h-12"></div>
-                    <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-md w-8 h-28"></div>
-                    <div className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t-md w-8 h-20"></div>
-                    <div className="bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-md w-8 h-18"></div>
-                    <div className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-md w-8 h-22"></div>
-                  </div>
-                  
-                  {/* Timeline indicators */}
-                  <div className="flex justify-center space-x-8 text-xs text-slate-500 font-medium">
-                    <span>Q1</span>
-                    <span>Q2</span>
-                    <span>Q3</span>
-                    <span>Q4</span>
-                  </div>
-                </div>
-
-                {/* Professional status indicators */}
-                <div className="absolute top-6 right-6 flex space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center shadow-lg">
-                    <div className="w-4 h-4 bg-white rounded-sm"></div>
-                  </div>
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center shadow-lg">
-                    <div className="w-4 h-4 border-2 border-white rounded-full"></div>
-                  </div>
-                </div>
+                {/* Laptop keyboard reflection */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-slate-400/30 to-transparent rounded-full"></div>
               </div>
             </div>
 
-            {/* Professional floating geometric elements */}
-            <div className="absolute -top-6 -left-6 w-12 h-12 bg-blue-500/20 rounded-lg rotate-12 animate-float"></div>
-            <div className="absolute -bottom-6 -right-6 w-8 h-8 bg-purple-500/20 rounded-lg -rotate-12 animate-float" style={{animationDelay: '2s'}}></div>
-            <div className="absolute top-1/2 -left-12 w-6 h-6 bg-indigo-500/20 rounded-lg rotate-45 animate-float" style={{animationDelay: '4s'}}></div>
+            {/* Floating laptop-themed elements */}
+            <div className="absolute -top-6 -left-6 w-12 h-8 bg-blue-500/20 rounded-t-lg animate-float border-b-2 border-blue-400/30"></div>
+            <div className="absolute -bottom-6 -right-6 w-10 h-10 bg-purple-500/20 rounded-lg animate-float" style={{animationDelay: '2s'}}></div>
+            <div className="absolute top-1/2 -left-12 w-8 h-6 bg-indigo-500/20 rounded-lg animate-float" style={{animationDelay: '4s'}}></div>
+            <div className="absolute top-1/4 -right-8 w-6 h-6 bg-cyan-500/20 rounded-full animate-float" style={{animationDelay: '3s'}}></div>
           </div>
         </div>
       </div>
