@@ -1,6 +1,5 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-import { Laptop, Desktop, Home, TrendingUp } from "lucide-react";
+import { Laptop, Monitor, Home, TrendingUp } from "lucide-react";
 
 const Stats = () => {
   const stats = [
@@ -14,7 +13,7 @@ const Stats = () => {
     { 
       number: "98%", 
       label: "Client Satisfaction", 
-      icon: Desktop, 
+      icon: Monitor, 
       color: "from-purple-500 to-pink-500",
       description: "Quality guaranteed"
     },
