@@ -3,6 +3,14 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone } from "lucide-react";
 
 const Contact = () => {
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/919818303762', '_blank');
+  };
+
+  const handleCallClick = () => {
+    window.open('tel:+919818303762', '_self');
+  };
+
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">
       {/* Animated background elements */}
@@ -30,6 +38,7 @@ const Contact = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{animationDelay: '0.6s'}}>
           <Button 
             size="lg" 
+            onClick={handleWhatsAppClick}
             className="bg-green-500 hover:bg-green-600 text-white border-2 border-transparent hover:border-white transition-all duration-300 hover:scale-105 text-lg px-8 py-4"
           >
             <MessageCircle className="mr-2 w-5 h-5" />
@@ -38,6 +47,7 @@ const Contact = () => {
           <Button 
             size="lg" 
             variant="outline" 
+            onClick={handleCallClick}
             className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 transition-all duration-300 hover:scale-105 text-lg px-8 py-4"
           >
             <Phone className="mr-2 w-5 h-5" />
